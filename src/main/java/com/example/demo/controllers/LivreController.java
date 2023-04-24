@@ -40,6 +40,11 @@ public class LivreController {
     public livre updateBook(@PathVariable Long id, @RequestBody livre book) {
         return bookService.updateBook(id, book);
     }
+    @PutMapping("/rendreLivre/{id}")
+    public livre rendreLivre(@PathVariable Long id) {
+        return bookService.RendreLivre(id);
+    }
+
 
     @DeleteMapping("/{id}")
     public void deleteBook(@PathVariable Long id) {

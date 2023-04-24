@@ -59,5 +59,9 @@ public class EmpService {
     public void deleteEmprunt(Long id) {
     	empRepository.deleteById(id);
     }
+    public void RendreEmp()
+    {
+    	
+    }
 
 }

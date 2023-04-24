@@ -41,5 +41,12 @@ public class LivreService {
         existingBook.setPrix(book.getPrix());
         return livreRepository.save(existingBook);
     }
+    public livre RendreLivre(Long id) {
+        livre existingBook = livreRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Book not found"));
+            
+            existingBook.setNbcopie(existingBook.getNbcopie()+1);
+            return livreRepository.save(existingBook);
+        }
 
 }
